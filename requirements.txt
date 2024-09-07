@@ -1,0 +1,2 @@
+quixstreams
+kafka-python-ng

@@ -1,0 +1,10 @@
+state/
+
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+docker-compose.override.yml
+*.log
+*.tmp
