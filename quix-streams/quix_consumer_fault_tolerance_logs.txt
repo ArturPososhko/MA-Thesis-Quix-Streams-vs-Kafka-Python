@@ -1,0 +1,37 @@
+INFO:root:CPU Count: 4
+INFO:root:Total Memory: 15981.05 MB
+INFO:root:Starting the first consumer run for 10 seconds.
+INFO:root:First global message received. Resource tracking started.
+INFO:root:First message received in First run. Timer started for this run.
+INFO:root:Consumed 5880 messages in the last second
+INFO:root:Consumed 4546 messages in the last second
+INFO:root:Consumed 5050 messages in the last second
+INFO:root:Consumed 5405 messages in the last second
+INFO:root:Consumed 5028 messages in the last second
+INFO:root:Consumed 4613 messages in the last second
+INFO:root:Consumed 5352 messages in the last second
+INFO:root:Consumed 5106 messages in the last second
+INFO:root:Consumed 5000 messages in the last second
+INFO:root:First run has completed 10 seconds. Stopping the consumer.
+INFO:root:Pausing consumer for 20 seconds.
+INFO:root:Starting the second consumer run for 10 seconds.
+INFO:root:First message received in Second run. Timer started for this run.
+INFO:root:Consumed 106116 messages in the last second
+INFO:root:Consumed 12905 messages in the last second
+INFO:root:Consumed 5051 messages in the last second
+INFO:root:Consumed 5021 messages in the last second
+INFO:root:Consumed 4967 messages in the last second
+INFO:root:Consumed 5021 messages in the last second
+INFO:root:Consumed 4998 messages in the last second
+INFO:root:Consumed 5012 messages in the last second
+INFO:root:Consumed 5008 messages in the last second
+INFO:root:Second run has completed 10 seconds. Stopping the consumer.
+INFO:root:CPU Usage (%) - Avg: 8.40
+INFO:root:Memory Usage (%) - Avg: 31.16
+INFO:root:Latency (ms) - Avg: 5370.13
+INFO:root:Throughput (messages/sec) - Avg: 5265.24
+INFO:root:Average CPU usage per core:
+INFO:root:Core 0: 9.75%
+INFO:root:Core 1: 7.24%
+INFO:root:Core 2: 6.69%
+INFO:root:Core 3: 6.23%

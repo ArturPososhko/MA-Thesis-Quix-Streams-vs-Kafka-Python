@@ -1,7 +1,9 @@
 import os
+import sys
 import time
 import psutil
 import numpy as np
+import logging
 from matplotlib import pyplot as plt
 from quixstreams import Application
 from threading import Thread
@@ -25,11 +27,18 @@ first_message_time = None
 run_first_message_time = None
 is_downtime = False
 
+# Configure logging
+log_file = "quix_consumer_fault_tolerance_logs.txt"
+logging.basicConfig(level=logging.INFO, handlers=[
+    logging.FileHandler(log_file, mode='w'),
+    logging.StreamHandler(sys.stdout)
+])
+
 def print_system_capacity():
     cpu_count = psutil.cpu_count(logical=True)
     total_memory = psutil.virtual_memory().total / (1024 * 1024)
-    print(f"CPU Count: {cpu_count}")
-    print(f"Total Memory: {total_memory:.2f} MB")
+    logging.info(f"CPU Count: {cpu_count}")
+    logging.info(f"Total Memory: {total_memory:.2f} MB")
 
 # Function to monitor resources
 def monitor_resources():
@@ -74,12 +83,12 @@ def quix_consumer(run_duration, run_name):
         # Track the first message of the entire session for resource monitoring
         if first_message_time is None:
             first_message_time = time.time()
-            print("First global message received. Resource tracking started.")
+            logging.info("First global message received. Resource tracking started.")
 
         # Track the first message of the current run
         if run_first_message_time is None:
             run_first_message_time = time.time()
-            print(f"First message received in {run_name}. Timer started for this run.")
+            logging.info(f"First message received in {run_name}. Timer started for this run.")
             message_window_start = run_first_message_time
 
         # Calculate latency
@@ -94,13 +103,13 @@ def quix_consumer(run_duration, run_name):
         if time.time() - message_window_start >= 1:
             throughput_data.append(messages_consumed)
             throughput_time.append(time.time() - first_message_time)
-            print(f"Consumed {messages_consumed} messages in the last second")
+            logging.info(f"Consumed {messages_consumed} messages in the last second")
             messages_consumed = 0
             message_window_start = time.time()
 
         # Stop the consumer after the specified run duration
         if time.time() - run_first_message_time >= run_duration:
-            print(f"{run_name} has completed {run_duration} seconds. Stopping the consumer.")
+            logging.info(f"{run_name} has completed {run_duration} seconds. Stopping the consumer.")
             _app.stop()
 
     # Subscribe the consumer to the topic and set the callback
@@ -117,16 +126,16 @@ def print_consumer_metrics():
     avg_latency = np.mean(latency_stats)
     avg_throughput = np.mean(throughput_data)
 
-    print(f"CPU Usage (%) - Avg: {avg_cpu:.2f}")
-    print(f"Memory Usage (%) - Avg: {avg_memory:.2f}")
-    print(f"Latency (ms) - Avg: {avg_latency:.2f}")
-    print(f"Throughput (messages/sec) - Avg: {avg_throughput:.2f}")
+    logging.info(f"CPU Usage (%) - Avg: {avg_cpu:.2f}")
+    logging.info(f"Memory Usage (%) - Avg: {avg_memory:.2f}")
+    logging.info(f"Latency (ms) - Avg: {avg_latency:.2f}")
+    logging.info(f"Throughput (messages/sec) - Avg: {avg_throughput:.2f}")
 
     if len(cpu_per_core_usage) > 0:
         per_core_avg = [np.mean(core) for core in cpu_per_core_usage]
-        print("Average CPU usage per core:")
+        logging.info("Average CPU usage per core:")
         for i, avg in enumerate(per_core_avg):
-            print(f"Core {i}: {avg:.2f}%")
+            logging.info(f"Core {i}: {avg:.2f}%")
 
     plt.figure(figsize=(12, 8))
 
@@ -167,13 +176,13 @@ if __name__ == "__main__":
     resource_monitor_thread.start()
 
     # Start the first consumer run
-    print(f"Starting the first consumer run for {first_run_duration} seconds.")
+    logging.info(f"Starting the first consumer run for {first_run_duration} seconds.")
     is_downtime = False
     run_first_message_time = None
     quix_consumer(first_run_duration, "First run")
 
     # Pause for the downtime duration
-    print(f"Pausing consumer for {downtime_duration} seconds.")
+    logging.info(f"Pausing consumer for {downtime_duration} seconds.")
     is_downtime = True
     for i in range(downtime_duration): # Zero throughput for each second during downtime
         throughput_data.append(0)
@@ -181,7 +190,7 @@ if __name__ == "__main__":
         time.sleep(1)
 
     # Start the second consumer run
-    print(f"Starting the second consumer run for {second_run_duration} seconds.")
+    logging.info(f"Starting the second consumer run for {second_run_duration} seconds.")
     is_downtime = False
     run_first_message_time = None
     quix_consumer(second_run_duration, "Second run")

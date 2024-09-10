@@ -1,0 +1,100 @@
+INFO:root:CPU Count: 4
+INFO:root:Total Memory: 15981.05 MB
+INFO:root:Produced 5667 messages in the last second
+INFO:root:Produced 5056 messages in the last second
+INFO:root:Produced 5488 messages in the last second
+INFO:root:Produced 4996 messages in the last second
+INFO:root:Produced 4873 messages in the last second
+INFO:root:Produced 5005 messages in the last second
+INFO:root:Produced 4917 messages in the last second
+INFO:root:Produced 5096 messages in the last second
+INFO:root:Produced 4991 messages in the last second
+INFO:root:Produced 4981 messages in the last second
+INFO:root:Produced 5187 messages in the last second
+INFO:root:Produced 4993 messages in the last second
+INFO:root:Produced 5051 messages in the last second
+INFO:root:Produced 4757 messages in the last second
+INFO:root:Produced 5026 messages in the last second
+INFO:root:Produced 5011 messages in the last second
+INFO:root:Produced 5002 messages in the last second
+INFO:root:Produced 5001 messages in the last second
+INFO:root:Produced 5024 messages in the last second
+INFO:root:Produced 4974 messages in the last second
+INFO:root:Produced 5223 messages in the last second
+INFO:root:Produced 4553 messages in the last second
+INFO:root:Produced 5008 messages in the last second
+INFO:root:Produced 5547 messages in the last second
+INFO:root:Produced 5012 messages in the last second
+INFO:root:Produced 4981 messages in the last second
+INFO:root:Produced 4968 messages in the last second
+INFO:root:Produced 5027 messages in the last second
+INFO:root:Produced 5077 messages in the last second
+INFO:root:Produced 4964 messages in the last second
+INFO:root:Produced 4922 messages in the last second
+INFO:root:Produced 5099 messages in the last second
+INFO:root:Produced 4989 messages in the last second
+INFO:root:Produced 5031 messages in the last second
+INFO:root:Produced 4996 messages in the last second
+INFO:root:Produced 4964 messages in the last second
+INFO:root:Produced 5053 messages in the last second
+INFO:root:Produced 4955 messages in the last second
+INFO:root:Produced 4996 messages in the last second
+INFO:root:Produced 4730 messages in the last second
+INFO:root:Produced 5318 messages in the last second
+INFO:root:Produced 5061 messages in the last second
+INFO:root:Produced 5024 messages in the last second
+INFO:root:Produced 4952 messages in the last second
+INFO:root:Produced 5013 messages in the last second
+INFO:root:Produced 4994 messages in the last second
+INFO:root:Produced 5021 messages in the last second
+INFO:root:Produced 5027 messages in the last second
+INFO:root:Produced 5055 messages in the last second
+INFO:root:Produced 4941 messages in the last second
+INFO:root:Produced 4683 messages in the last second
+INFO:root:Produced 5199 messages in the last second
+INFO:root:Produced 5033 messages in the last second
+INFO:root:Produced 5138 messages in the last second
+INFO:root:Produced 5014 messages in the last second
+INFO:root:Produced 4983 messages in the last second
+INFO:root:Produced 5044 messages in the last second
+INFO:root:Produced 5048 messages in the last second
+INFO:root:Produced 4915 messages in the last second
+INFO:root:Produced 5042 messages in the last second
+INFO:root:Produced 4899 messages in the last second
+INFO:root:Produced 5041 messages in the last second
+INFO:root:Produced 5222 messages in the last second
+INFO:root:Produced 4828 messages in the last second
+INFO:root:Produced 5180 messages in the last second
+INFO:root:Produced 4899 messages in the last second
+INFO:root:Produced 5175 messages in the last second
+INFO:root:Produced 4910 messages in the last second
+INFO:root:Produced 5046 messages in the last second
+INFO:root:Produced 5032 messages in the last second
+INFO:root:Produced 5032 messages in the last second
+INFO:root:Produced 4995 messages in the last second
+INFO:root:Produced 5034 messages in the last second
+INFO:root:Produced 4954 messages in the last second
+INFO:root:Produced 5049 messages in the last second
+INFO:root:Produced 4997 messages in the last second
+INFO:root:Produced 5044 messages in the last second
+INFO:root:Produced 4937 messages in the last second
+INFO:root:Produced 5075 messages in the last second
+INFO:root:Produced 4985 messages in the last second
+INFO:root:Produced 5035 messages in the last second
+INFO:root:Produced 4908 messages in the last second
+INFO:root:Produced 5104 messages in the last second
+INFO:root:Produced 4933 messages in the last second
+INFO:root:Produced 5064 messages in the last second
+INFO:root:Produced 5032 messages in the last second
+INFO:root:Produced 4987 messages in the last second
+INFO:root:Produced 5001 messages in the last second
+INFO:root:Produced 5026 messages in the last second
+INFO:root:Quix producer stopped.
+INFO:root:CPU Usage (%) - Avg: 8.01
+INFO:root:Memory Usage (%) - Avg: 30.63
+INFO:root:Message Output (msg/sec) - Avg: 5023.82
+INFO:root:Average CPU usage per core:
+INFO:root:Core 0: 7.32%
+INFO:root:Core 1: 7.29%
+INFO:root:Core 2: 8.79%
+INFO:root:Core 3: 7.70%

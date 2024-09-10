@@ -1,16 +1,15 @@
 import os
 import sys
 import time
-import json
 import psutil
 import numpy as np
 import logging
 from matplotlib import pyplot as plt
-from kafka import KafkaConsumer
+from quixstreams import Application
 from threading import Thread
 
 # Configurable duration for the consumer
-uptime_duration = 60  # Uptime of the consumer in seconds
+uptime_duration = 109  # Uptime of the consumer in seconds
 
 # Global variables for consumer metrics
 messages_consumed = 0
@@ -25,7 +24,7 @@ message_window_start = None
 first_message_time = None
 
 # Configure logging
-log_file = "kafka_consumer_performance_logs.txt"
+log_file = "quix_consumer_scalability_logs.txt"
 logging.basicConfig(level=logging.INFO, handlers=[
     logging.FileHandler(log_file, mode='w'),
     logging.StreamHandler(sys.stdout)
@@ -62,24 +61,17 @@ def monitor_resources():
 
         time.sleep(1)
 
-# Kafka-Python Consumer
-def kafka_python_consumer():
+# Quix Streams Consumer
+def quix_consumer():
     global messages_consumed, latency_stats, message_window_start, first_message_time, throughput_data, throughput_time
+    _app = Application(broker_address=os.environ.get("BROKER_ADDRESS", "localhost:9092"),
+                       consumer_group="quix-scalability-consumer",
+                       auto_offset_reset="latest")
+    
+    topic = _app.topic(name="quix-scalability-test")
 
-    logging.info("Starting Kafka-Python consumer...")
-
-    # Initialize Kafka consumer
-    consumer = KafkaConsumer(
-        'kafka-5000-events-per-sec',
-        bootstrap_servers=os.environ.get("BROKER_ADDRESS", "localhost:9092"),
-        auto_offset_reset='latest',
-        group_id='kafka-performance-consumer',
-        value_deserializer=lambda v: json.loads(v.decode('utf-8'))
-    )
-
-    for message in consumer:
-        produced_timestamp = message.value["Timestamp"]
-        consumed_timestamp = time.time_ns()
+    def on_message_consume(message):
+        global messages_consumed, latency_stats, message_window_start, first_message_time, throughput_data, throughput_time
 
         # Track the first message
         if first_message_time is None:
@@ -88,7 +80,9 @@ def kafka_python_consumer():
             message_window_start = first_message_time
 
         # Calculate latency
-        latency = (consumed_timestamp - produced_timestamp) / 1_000_000
+        production_timestamp = message["Timestamp"]
+        consumption_timestamp = time.time_ns()
+        latency = (consumption_timestamp - production_timestamp) / 1_000_000  # in ms
         latency_stats.append(latency)
 
         messages_consumed += 1
@@ -104,9 +98,14 @@ def kafka_python_consumer():
         # Stop the consumer after the specified run duration
         if time.time() - first_message_time >= uptime_duration:
             logging.info(f"{uptime_duration} seconds have passed since the first message. Stopping the consumer.")
-            break
+            _app.stop()
 
-    consumer.close()
+    # Subscribe the consumer to the topic and set the callback
+    sdf = _app.dataframe(topic=topic)
+    sdf = sdf.apply(on_message_consume)
+    
+    # Run the consumer
+    _app.run(sdf)
 
 # Function to print consumer metrics and generate graphs
 def print_consumer_metrics():
@@ -153,7 +152,7 @@ def print_consumer_metrics():
 
     # Save and display the plot
     plt.tight_layout()
-    plt.savefig("kafka_consumer_performance_metrics.png")
+    plt.savefig("quix_consumer_scalability_metrics.png")
     plt.show()
 
 if __name__ == "__main__":
@@ -163,9 +162,9 @@ if __name__ == "__main__":
     resource_monitor_thread = Thread(target=monitor_resources)
     resource_monitor_thread.daemon = True
     resource_monitor_thread.start()
-
+    
     # Start the consumer run
-    kafka_python_consumer()
-
+    quix_consumer()
+    
     # Print and plot the consumer metrics
     print_consumer_metrics()

@@ -1,0 +1,135 @@
+INFO:root:CPU Count: 4
+INFO:root:Total Memory: 15981.05 MB
+INFO:root:Produced 2 messages in the last second
+INFO:root:Produced 2 messages in the last second
+INFO:root:Produced 2 messages in the last second
+INFO:root:Increasing event rate to 10001 messages per second
+INFO:root:Produced 2 messages in the last second
+INFO:root:Produced 10005 messages in the last second
+INFO:root:Produced 10016 messages in the last second
+INFO:root:Produced 10008 messages in the last second
+INFO:root:Produced 10001 messages in the last second
+INFO:root:Increasing event rate to 20001 messages per second
+INFO:root:Produced 9989 messages in the last second
+INFO:root:Produced 20013 messages in the last second
+INFO:root:Produced 20026 messages in the last second
+INFO:root:Produced 20012 messages in the last second
+INFO:root:Produced 19980 messages in the last second
+INFO:root:Increasing event rate to 30001 messages per second
+INFO:root:Produced 19989 messages in the last second
+INFO:root:Produced 30017 messages in the last second
+INFO:root:Produced 30023 messages in the last second
+INFO:root:Produced 30000 messages in the last second
+INFO:root:Produced 30006 messages in the last second
+INFO:root:Increasing event rate to 40001 messages per second
+INFO:root:Produced 30006 messages in the last second
+INFO:root:Produced 40028 messages in the last second
+INFO:root:Produced 39952 messages in the last second
+INFO:root:Produced 40047 messages in the last second
+INFO:root:Produced 40029 messages in the last second
+INFO:root:Increasing event rate to 50001 messages per second
+INFO:root:Produced 39997 messages in the last second
+INFO:root:Produced 49991 messages in the last second
+INFO:root:Produced 49988 messages in the last second
+INFO:root:Produced 50055 messages in the last second
+INFO:root:Produced 50030 messages in the last second
+INFO:root:Increasing event rate to 60001 messages per second
+INFO:root:Produced 49966 messages in the last second
+INFO:root:Produced 60019 messages in the last second
+INFO:root:Produced 60018 messages in the last second
+INFO:root:Produced 60034 messages in the last second
+INFO:root:Produced 60005 messages in the last second
+INFO:root:Increasing event rate to 70001 messages per second
+INFO:root:Produced 59982 messages in the last second
+INFO:root:Produced 70031 messages in the last second
+INFO:root:Produced 70005 messages in the last second
+INFO:root:Produced 69974 messages in the last second
+INFO:root:Produced 70035 messages in the last second
+INFO:root:Increasing event rate to 80001 messages per second
+INFO:root:Produced 69937 messages in the last second
+INFO:root:Produced 80048 messages in the last second
+INFO:root:Produced 71532 messages in the last second
+INFO:root:Produced 88251 messages in the last second
+INFO:root:Produced 80010 messages in the last second
+INFO:root:Increasing event rate to 90001 messages per second
+INFO:root:Produced 76894 messages in the last second
+INFO:root:Produced 88873 messages in the last second
+INFO:root:Produced 91780 messages in the last second
+INFO:root:Produced 71538 messages in the last second
+INFO:root:Produced 72562 messages in the last second
+INFO:root:Increasing event rate to 100001 messages per second
+INFO:root:Produced 70556 messages in the last second
+INFO:root:Produced 69335 messages in the last second
+INFO:root:Produced 94262 messages in the last second
+INFO:root:Produced 94285 messages in the last second
+INFO:root:Produced 70952 messages in the last second
+INFO:root:Increasing event rate to 110001 messages per second
+INFO:root:Produced 98627 messages in the last second
+INFO:root:Produced 106916 messages in the last second
+INFO:root:Produced 68890 messages in the last second
+INFO:root:Produced 115275 messages in the last second
+INFO:root:Produced 111734 messages in the last second
+INFO:root:Increasing event rate to 120001 messages per second
+INFO:root:Produced 78425 messages in the last second
+INFO:root:Produced 118357 messages in the last second
+INFO:root:Produced 117275 messages in the last second
+INFO:root:Produced 116084 messages in the last second
+INFO:root:Produced 120509 messages in the last second
+INFO:root:Increasing event rate to 130001 messages per second
+INFO:root:Produced 120479 messages in the last second
+INFO:root:Produced 118450 messages in the last second
+INFO:root:Produced 127149 messages in the last second
+INFO:root:Produced 98184 messages in the last second
+INFO:root:Produced 122642 messages in the last second
+INFO:root:Increasing event rate to 140001 messages per second
+INFO:root:Produced 129435 messages in the last second
+INFO:root:Produced 109502 messages in the last second
+INFO:root:Produced 98606 messages in the last second
+INFO:root:Produced 121316 messages in the last second
+INFO:root:Produced 118860 messages in the last second
+INFO:root:Increasing event rate to 150001 messages per second
+INFO:root:Produced 128787 messages in the last second
+INFO:root:Produced 124447 messages in the last second
+INFO:root:Produced 128926 messages in the last second
+INFO:root:Produced 114757 messages in the last second
+INFO:root:Produced 100430 messages in the last second
+INFO:root:Increasing event rate to 160001 messages per second
+INFO:root:Produced 126780 messages in the last second
+INFO:root:Produced 129088 messages in the last second
+INFO:root:Produced 124219 messages in the last second
+INFO:root:Produced 72129 messages in the last second
+INFO:root:Produced 85088 messages in the last second
+INFO:root:Increasing event rate to 170001 messages per second
+INFO:root:Produced 123827 messages in the last second
+INFO:root:Produced 126158 messages in the last second
+INFO:root:Produced 85522 messages in the last second
+INFO:root:Produced 127537 messages in the last second
+INFO:root:Produced 117035 messages in the last second
+INFO:root:Increasing event rate to 180001 messages per second
+INFO:root:Produced 104310 messages in the last second
+INFO:root:Produced 112966 messages in the last second
+INFO:root:Produced 93172 messages in the last second
+INFO:root:Produced 123609 messages in the last second
+INFO:root:Produced 128502 messages in the last second
+INFO:root:Increasing event rate to 190001 messages per second
+INFO:root:Produced 120773 messages in the last second
+INFO:root:Produced 124989 messages in the last second
+INFO:root:Produced 108202 messages in the last second
+INFO:root:Produced 131821 messages in the last second
+INFO:root:Produced 123892 messages in the last second
+INFO:root:Increasing event rate to 200001 messages per second
+INFO:root:Produced 119223 messages in the last second
+INFO:root:Produced 119246 messages in the last second
+INFO:root:Produced 85327 messages in the last second
+INFO:root:Produced 68671 messages in the last second
+INFO:root:Produced 122270 messages in the last second
+INFO:root:Increasing event rate to 210001 messages per second
+INFO:root:Quix producer scalability test stopped.
+INFO:root:CPU Usage (%) - Avg: 47.58
+INFO:root:Memory Usage (%) - Avg: 28.11
+INFO:root:Message Output (msg/sec) - Avg: 79024.45
+INFO:root:Average CPU usage per core:
+INFO:root:Core 0: 48.44%
+INFO:root:Core 1: 48.25%
+INFO:root:Core 2: 36.61%
+INFO:root:Core 3: 57.61%

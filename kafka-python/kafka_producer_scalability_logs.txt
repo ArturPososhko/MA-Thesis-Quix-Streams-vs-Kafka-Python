@@ -1,0 +1,84 @@
+INFO:root:CPU Count: 4
+INFO:root:Total Memory: 15981.05 MB
+INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+INFO:kafka.conn:Probing node bootstrap-0 broker version
+INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+INFO:kafka.conn:Broker version identified as 2.6.0
+INFO:kafka.conn:Set configuration api_version=(2, 6, 0) to skip auto check_version requests on startup
+INFO:kafka.conn:<BrokerConnection node_id=1 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+INFO:kafka.conn:<BrokerConnection node_id=1 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+INFO:root:Produced 2 messages in the last second
+INFO:root:Produced 2 messages in the last second
+INFO:root:Produced 2 messages in the last second
+INFO:root:Increasing event rate to 10001 messages per second
+INFO:root:Produced 10002 messages in the last second
+INFO:root:Produced 10004 messages in the last second
+INFO:root:Produced 10025 messages in the last second
+INFO:root:Produced 10042 messages in the last second
+INFO:root:Increasing event rate to 20001 messages per second
+INFO:root:Produced 9975 messages in the last second
+INFO:root:Produced 18675 messages in the last second
+INFO:root:Produced 19377 messages in the last second
+INFO:root:Produced 19625 messages in the last second
+INFO:root:Produced 18725 messages in the last second
+INFO:root:Increasing event rate to 30001 messages per second
+INFO:root:Produced 18816 messages in the last second
+INFO:root:Produced 17048 messages in the last second
+INFO:root:Produced 18825 messages in the last second
+INFO:root:Produced 18232 messages in the last second
+INFO:root:Produced 17617 messages in the last second
+INFO:root:Increasing event rate to 40001 messages per second
+INFO:root:Produced 19760 messages in the last second
+INFO:root:Produced 18412 messages in the last second
+INFO:root:Produced 19175 messages in the last second
+INFO:root:Produced 19095 messages in the last second
+INFO:root:Produced 17175 messages in the last second
+INFO:root:Increasing event rate to 50001 messages per second
+INFO:root:Produced 18809 messages in the last second
+INFO:root:Produced 17527 messages in the last second
+INFO:root:Produced 19068 messages in the last second
+INFO:root:Produced 18757 messages in the last second
+INFO:root:Produced 19739 messages in the last second
+INFO:root:Increasing event rate to 60001 messages per second
+INFO:root:Produced 19232 messages in the last second
+INFO:root:Produced 20230 messages in the last second
+INFO:root:Produced 18716 messages in the last second
+INFO:root:Produced 18743 messages in the last second
+INFO:root:Produced 16623 messages in the last second
+INFO:root:Increasing event rate to 70001 messages per second
+INFO:root:Produced 18575 messages in the last second
+INFO:root:Produced 17487 messages in the last second
+INFO:root:Produced 17962 messages in the last second
+INFO:root:Produced 19902 messages in the last second
+INFO:root:Produced 16500 messages in the last second
+INFO:root:Increasing event rate to 80001 messages per second
+INFO:root:Produced 19639 messages in the last second
+INFO:root:Produced 19021 messages in the last second
+INFO:root:Produced 18985 messages in the last second
+INFO:root:Produced 17860 messages in the last second
+INFO:root:Produced 18605 messages in the last second
+INFO:root:Increasing event rate to 90001 messages per second
+INFO:root:Produced 19778 messages in the last second
+INFO:root:Produced 19957 messages in the last second
+INFO:root:Produced 18685 messages in the last second
+INFO:root:Produced 17980 messages in the last second
+INFO:root:Produced 18671 messages in the last second
+INFO:root:Increasing event rate to 100001 messages per second
+INFO:root:Produced 19094 messages in the last second
+INFO:root:Produced 18710 messages in the last second
+INFO:root:Produced 16811 messages in the last second
+INFO:root:Produced 18209 messages in the last second
+INFO:root:Produced 16814 messages in the last second
+INFO:root:Increasing event rate to 110001 messages per second
+INFO:kafka.producer.kafka:Closing the Kafka producer with 9223372036.0 secs timeout.
+INFO:kafka.conn:<BrokerConnection node_id=1 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+INFO:root:Kafka-Python producer scalability test stopped.
+INFO:root:CPU Usage (%) - Avg: 35.88
+INFO:root:Memory Usage (%) - Avg: 27.04
+INFO:root:Message Output (msg/sec) - Avg: 16678.85
+INFO:root:Average CPU usage per core:
+INFO:root:Core 0: 35.55%
+INFO:root:Core 1: 35.47%
+INFO:root:Core 2: 34.86%
+INFO:root:Core 3: 35.98%

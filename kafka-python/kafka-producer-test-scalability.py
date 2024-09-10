@@ -1,5 +1,5 @@
-import sys
 import os
+import sys
 import time
 import json
 import psutil
@@ -12,8 +12,11 @@ from matplotlib import pyplot as plt
 sys.path.append(os.path.dirname(os.path.abspath(__file__)) + '/../')
 from datasource.TemperatureReadings import TemperatureEventGenerator
 
-# Configurable duration for the producer
-uptime_duration = 90  # Uptime of the producer in seconds
+# Configurable parameters for the scalability test
+initial_event_rate = 1  # Starting number of events per second
+event_rate_increment = 10000  # Increment the event rate by this value
+max_event_rate = 100001  # Maximum number of events per second for scalability test
+increment_duration = 5  # Duration in seconds before increasing the event rate
 
 # Global variables for producer metrics
 messages_sent = 0
@@ -27,7 +30,7 @@ message_window_start = None
 first_message_time = None
 
 # Configure logging
-log_file = "kafka_producer_5000_events_per_sec_logs.txt"
+log_file = "kafka_producer_scalability_logs.txt"
 logging.basicConfig(level=logging.INFO, handlers=[
     logging.FileHandler(log_file, mode='w'),
     logging.StreamHandler(sys.stdout)
@@ -36,7 +39,7 @@ logging.basicConfig(level=logging.INFO, handlers=[
 # Function to print the system's CPU and memory capacity
 def print_system_capacity():
     cpu_count = psutil.cpu_count(logical=True)
-    total_memory = psutil.virtual_memory().total / (1024 * 1024)  # Convert to MB
+    total_memory = psutil.virtual_memory().total / (1024 * 1024)
     logging.info(f"CPU Count: {cpu_count}")
     logging.info(f"Total Memory: {total_memory:.2f} MB")
 
@@ -74,31 +77,40 @@ def kafka_python_producer():
         bootstrap_servers=os.environ.get("BROKER_ADDRESS", "localhost:9092"),
         value_serializer=lambda v: json.dumps(v).encode('utf-8')
     )
-    temperature_event_generator = TemperatureEventGenerator(max_events_per_second=5000)
 
-    # Set the start time for the first message and window tracking
+    first_message_time = time.time()
+    message_window_start = first_message_time
+
+    current_event_rate = initial_event_rate
+    temperature_event_generator = TemperatureEventGenerator(max_events_per_second=current_event_rate)
+
     start_time = time.time()
-    first_message_time = start_time
-    message_window_start = time.time()
 
-    # Produce messages for the specified run duration
-    while time.time() - start_time < uptime_duration:
-        event = temperature_event_generator.generate_limited_event()
-        producer.send('kafka-5000-events-per-sec', key=event["key"].encode('utf-8'), value=event["value"])
-        messages_sent += 1
+    # Produce messages while gradually increasing the event rate
+    while current_event_rate <= max_event_rate:
+        iteration_start_time = time.time()
+        while time.time() - iteration_start_time < increment_duration:
+            event = temperature_event_generator.generate_limited_event()
+            producer.send('kafka-scalability-test', key=event["key"].encode('utf-8'), value=event["value"])
+            messages_sent += 1
 
-        # Log producer stats every second
-        if time.time() - message_window_start >= 1:
-            throughput_data.append(messages_sent)
-            throughput_time.append(time.time() - first_message_time)
-            logging.info(f"Produced {messages_sent} messages in the last second")
-            messages_sent = 0
-            message_window_start = time.time()
+            # Log producer stats every second
+            if time.time() - message_window_start >= 1:
+                throughput_data.append(messages_sent)
+                throughput_time.append(time.time() - first_message_time)
+                logging.info(f"Produced {messages_sent} messages in the last second")
+                messages_sent = 0
+                message_window_start = time.time()
+
+        # Increase the event rate after every increment_duration
+        current_event_rate += event_rate_increment
+        temperature_event_generator = TemperatureEventGenerator(max_events_per_second=current_event_rate)
+        logging.info(f"Increasing event rate to {current_event_rate} messages per second")
 
     producer.flush()  # Ensure all messages are sent before stopping
     producer.close()
 
-    logging.info("Kafka-Python producer stopped.")
+    logging.info("Kafka-Python producer scalability test stopped.")
 
 # Function to print producer metrics and generate graphs
 def print_producer_metrics():
@@ -143,7 +155,7 @@ def print_producer_metrics():
 
     # Save and display the plot
     plt.tight_layout()
-    plt.savefig("kafka_producer_performance_metrics.png")
+    plt.savefig("kafka_producer_scalability_metrics.png")
     plt.show()
 
 if __name__ == "__main__":
@@ -157,5 +169,5 @@ if __name__ == "__main__":
     # Start the producer run
     kafka_python_producer()
 
-    # Print and plot producer metrics
+    # Print and plot the producer metrics
     print_producer_metrics()

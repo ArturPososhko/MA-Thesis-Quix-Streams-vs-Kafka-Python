@@ -1,9 +1,18 @@
+import logging
 import os
+import sys
 import time
 import json
 from kafka import KafkaConsumer, KafkaProducer
 from collections import deque
 from statistics import mean
+
+# Configure logging
+log_file = "kafka_consumer_anomaly_logs.txt"
+logging.basicConfig(level=logging.INFO, handlers=[
+    logging.FileHandler(log_file, mode='w'),
+    logging.StreamHandler(sys.stdout)
+])
 
 # Kafka settings
 broker_address = os.environ.get("BROKER_ADDRESS", "localhost:9092")
@@ -74,7 +83,7 @@ def process_temperature_reading(message):
 # Function to check if an alert should be sent
 def should_alert(window_value: float, key, timestamp, headers) -> bool:
     if window_value >= 90:
-        print(f"Kafka-Python Consumer: Alerting for MID {key}: Average Temperature {window_value}")
+        logging.info(f"Kafka-Python Consumer: Alerting for MID {key}: Average Temperature {window_value}")
         return True
     return False
 
@@ -89,4 +98,4 @@ finally:
     producer.close()
 
 if __name__ == "__main__":
-    print("Kafka Temperature Alerter is running...")
+    logging.info("Kafka Temperature Alerter is running...")

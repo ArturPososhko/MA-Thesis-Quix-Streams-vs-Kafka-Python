@@ -1,0 +1,71 @@
+INFO:root:CPU Count: 4
+INFO:root:Total Memory: 15981.05 MB
+INFO:root:First message received. Timer started.
+INFO:root:Consumed 70978 messages in the last second
+INFO:root:Consumed 69634 messages in the last second
+INFO:root:Consumed 70548 messages in the last second
+INFO:root:Consumed 70017 messages in the last second
+INFO:root:Consumed 69908 messages in the last second
+INFO:root:Consumed 69961 messages in the last second
+INFO:root:Consumed 69577 messages in the last second
+INFO:root:Consumed 68477 messages in the last second
+INFO:root:Consumed 72055 messages in the last second
+INFO:root:Consumed 66047 messages in the last second
+INFO:root:Consumed 72290 messages in the last second
+INFO:root:Consumed 71717 messages in the last second
+INFO:root:Consumed 70018 messages in the last second
+INFO:root:Consumed 69983 messages in the last second
+INFO:root:Consumed 69466 messages in the last second
+INFO:root:Consumed 70257 messages in the last second
+INFO:root:Consumed 70453 messages in the last second
+INFO:root:Consumed 69846 messages in the last second
+INFO:root:Consumed 70156 messages in the last second
+INFO:root:Consumed 69888 messages in the last second
+INFO:root:Consumed 69827 messages in the last second
+INFO:root:Consumed 69598 messages in the last second
+INFO:root:Consumed 69881 messages in the last second
+INFO:root:Consumed 70853 messages in the last second
+INFO:root:Consumed 69969 messages in the last second
+INFO:root:Consumed 69402 messages in the last second
+INFO:root:Consumed 69915 messages in the last second
+INFO:root:Consumed 71792 messages in the last second
+INFO:root:Consumed 70034 messages in the last second
+INFO:root:Consumed 68782 messages in the last second
+INFO:root:Consumed 59137 messages in the last second
+INFO:root:Consumed 82135 messages in the last second
+INFO:root:Consumed 70022 messages in the last second
+INFO:root:Consumed 69965 messages in the last second
+INFO:root:Consumed 69963 messages in the last second
+INFO:root:Consumed 68842 messages in the last second
+INFO:root:Consumed 70211 messages in the last second
+INFO:root:Consumed 71174 messages in the last second
+INFO:root:Consumed 69942 messages in the last second
+INFO:root:Consumed 69878 messages in the last second
+INFO:root:Consumed 69616 messages in the last second
+INFO:root:Consumed 69192 messages in the last second
+INFO:root:Consumed 71382 messages in the last second
+INFO:root:Consumed 68620 messages in the last second
+INFO:root:Consumed 70320 messages in the last second
+INFO:root:Consumed 69942 messages in the last second
+INFO:root:Consumed 70971 messages in the last second
+INFO:root:Consumed 69484 messages in the last second
+INFO:root:Consumed 59558 messages in the last second
+INFO:root:Consumed 55586 messages in the last second
+INFO:root:Consumed 56732 messages in the last second
+INFO:root:Consumed 69853 messages in the last second
+INFO:root:Consumed 103191 messages in the last second
+INFO:root:Consumed 75612 messages in the last second
+INFO:root:Consumed 70018 messages in the last second
+INFO:root:Consumed 69654 messages in the last second
+INFO:root:Consumed 69103 messages in the last second
+INFO:root:Consumed 57050 messages in the last second
+INFO:root:59 seconds have passed since the first message. Stopping the consumer.
+INFO:root:CPU Usage (%) - Avg: 49.29
+INFO:root:Memory Usage (%) - Avg: 31.88
+INFO:root:Latency (ms) - Avg: 117.84
+INFO:root:Throughput (messages/sec) - Avg: 69801.41
+INFO:root:Average CPU usage per core:
+INFO:root:Core 0: 40.30%
+INFO:root:Core 1: 42.25%
+INFO:root:Core 2: 43.96%
+INFO:root:Core 3: 57.61%

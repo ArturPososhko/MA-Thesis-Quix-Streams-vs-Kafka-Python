@@ -10,7 +10,7 @@ from kafka import KafkaConsumer
 from threading import Thread
 
 # Configurable duration for the consumer
-uptime_duration = 60  # Uptime of the consumer in seconds
+uptime_duration = 54  # Uptime of the consumer in seconds
 
 # Global variables for consumer metrics
 messages_consumed = 0
@@ -25,7 +25,7 @@ message_window_start = None
 first_message_time = None
 
 # Configure logging
-log_file = "kafka_consumer_performance_logs.txt"
+log_file = "kafka_consumer_scalability_logs.txt"
 logging.basicConfig(level=logging.INFO, handlers=[
     logging.FileHandler(log_file, mode='w'),
     logging.StreamHandler(sys.stdout)
@@ -70,10 +70,10 @@ def kafka_python_consumer():
 
     # Initialize Kafka consumer
     consumer = KafkaConsumer(
-        'kafka-5000-events-per-sec',
+        'kafka-scalability-test',
         bootstrap_servers=os.environ.get("BROKER_ADDRESS", "localhost:9092"),
         auto_offset_reset='latest',
-        group_id='kafka-performance-consumer',
+        group_id='kafka-scalability-consumer',
         value_deserializer=lambda v: json.loads(v.decode('utf-8'))
     )
 
@@ -153,7 +153,7 @@ def print_consumer_metrics():
 
     # Save and display the plot
     plt.tight_layout()
-    plt.savefig("kafka_consumer_performance_metrics.png")
+    plt.savefig("kafka_consumer_scalability_metrics.png")
     plt.show()
 
 if __name__ == "__main__":

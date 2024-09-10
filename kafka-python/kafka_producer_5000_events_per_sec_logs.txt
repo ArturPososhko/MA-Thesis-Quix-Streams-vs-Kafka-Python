@@ -1,0 +1,109 @@
+INFO:root:CPU Count: 4
+INFO:root:Total Memory: 15981.05 MB
+INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+INFO:kafka.conn:Probing node bootstrap-0 broker version
+INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+INFO:kafka.conn:Broker version identified as 2.6.0
+INFO:kafka.conn:Set configuration api_version=(2, 6, 0) to skip auto check_version requests on startup
+INFO:kafka.conn:<BrokerConnection node_id=1 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+INFO:kafka.conn:<BrokerConnection node_id=1 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+INFO:root:Produced 5001 messages in the last second
+INFO:root:Produced 5021 messages in the last second
+INFO:root:Produced 5043 messages in the last second
+INFO:root:Produced 5052 messages in the last second
+INFO:root:Produced 5075 messages in the last second
+INFO:root:Produced 5022 messages in the last second
+INFO:root:Produced 5031 messages in the last second
+INFO:root:Produced 5090 messages in the last second
+INFO:root:Produced 5000 messages in the last second
+INFO:root:Produced 5122 messages in the last second
+INFO:root:Produced 5017 messages in the last second
+INFO:root:Produced 5024 messages in the last second
+INFO:root:Produced 5039 messages in the last second
+INFO:root:Produced 5005 messages in the last second
+INFO:root:Produced 4901 messages in the last second
+INFO:root:Produced 5328 messages in the last second
+INFO:root:Produced 5472 messages in the last second
+INFO:root:Produced 4916 messages in the last second
+INFO:root:Produced 5044 messages in the last second
+INFO:root:Produced 4959 messages in the last second
+INFO:root:Produced 5331 messages in the last second
+INFO:root:Produced 4941 messages in the last second
+INFO:root:Produced 4673 messages in the last second
+INFO:root:Produced 5679 messages in the last second
+INFO:root:Produced 4632 messages in the last second
+INFO:root:Produced 5410 messages in the last second
+INFO:root:Produced 4912 messages in the last second
+INFO:root:Produced 4850 messages in the last second
+INFO:root:Produced 5299 messages in the last second
+INFO:root:Produced 4550 messages in the last second
+INFO:root:Produced 5255 messages in the last second
+INFO:root:Produced 5338 messages in the last second
+INFO:root:Produced 5406 messages in the last second
+INFO:root:Produced 4771 messages in the last second
+INFO:root:Produced 5286 messages in the last second
+INFO:root:Produced 4770 messages in the last second
+INFO:root:Produced 5416 messages in the last second
+INFO:root:Produced 5171 messages in the last second
+INFO:root:Produced 4252 messages in the last second
+INFO:root:Produced 5635 messages in the last second
+INFO:root:Produced 4551 messages in the last second
+INFO:root:Produced 5583 messages in the last second
+INFO:root:Produced 4711 messages in the last second
+INFO:root:Produced 4859 messages in the last second
+INFO:root:Produced 5469 messages in the last second
+INFO:root:Produced 5173 messages in the last second
+INFO:root:Produced 5070 messages in the last second
+INFO:root:Produced 4923 messages in the last second
+INFO:root:Produced 4793 messages in the last second
+INFO:root:Produced 5899 messages in the last second
+INFO:root:Produced 5063 messages in the last second
+INFO:root:Produced 4892 messages in the last second
+INFO:root:Produced 5663 messages in the last second
+INFO:root:Produced 5013 messages in the last second
+INFO:root:Produced 4455 messages in the last second
+INFO:root:Produced 5708 messages in the last second
+INFO:root:Produced 4587 messages in the last second
+INFO:root:Produced 5546 messages in the last second
+INFO:root:Produced 4865 messages in the last second
+INFO:root:Produced 3924 messages in the last second
+INFO:root:Produced 6487 messages in the last second
+INFO:root:Produced 4756 messages in the last second
+INFO:root:Produced 4441 messages in the last second
+INFO:root:Produced 5785 messages in the last second
+INFO:root:Produced 4888 messages in the last second
+INFO:root:Produced 4435 messages in the last second
+INFO:root:Produced 5723 messages in the last second
+INFO:root:Produced 5003 messages in the last second
+INFO:root:Produced 5020 messages in the last second
+INFO:root:Produced 5004 messages in the last second
+INFO:root:Produced 5029 messages in the last second
+INFO:root:Produced 5053 messages in the last second
+INFO:root:Produced 5080 messages in the last second
+INFO:root:Produced 5042 messages in the last second
+INFO:root:Produced 5021 messages in the last second
+INFO:root:Produced 5066 messages in the last second
+INFO:root:Produced 5063 messages in the last second
+INFO:root:Produced 5093 messages in the last second
+INFO:root:Produced 5050 messages in the last second
+INFO:root:Produced 5106 messages in the last second
+INFO:root:Produced 4948 messages in the last second
+INFO:root:Produced 4903 messages in the last second
+INFO:root:Produced 5313 messages in the last second
+INFO:root:Produced 5003 messages in the last second
+INFO:root:Produced 5003 messages in the last second
+INFO:root:Produced 5056 messages in the last second
+INFO:root:Produced 4863 messages in the last second
+INFO:root:Produced 5693 messages in the last second
+INFO:kafka.producer.kafka:Closing the Kafka producer with 9223372036.0 secs timeout.
+INFO:kafka.conn:<BrokerConnection node_id=1 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+INFO:root:Kafka-Python producer stopped.
+INFO:root:CPU Usage (%) - Avg: 14.28
+INFO:root:Memory Usage (%) - Avg: 31.48
+INFO:root:Message Output (msg/sec) - Avg: 5072.88
+INFO:root:Average CPU usage per core:
+INFO:root:Core 0: 13.96%
+INFO:root:Core 1: 13.44%
+INFO:root:Core 2: 13.48%
+INFO:root:Core 3: 16.54%

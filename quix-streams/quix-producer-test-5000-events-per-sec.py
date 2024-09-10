@@ -3,6 +3,7 @@ import os
 import time
 import psutil
 import numpy as np
+import logging
 from matplotlib import pyplot as plt
 from quixstreams import Application
 from threading import Thread
@@ -24,11 +25,18 @@ cpu_time = []
 message_window_start = None
 first_message_time = None
 
+# Configure logging
+log_file = "quix_producer_5000_events_per_sec_logs.txt"
+logging.basicConfig(level=logging.INFO, handlers=[
+    logging.FileHandler(log_file, mode='w'),
+    logging.StreamHandler(sys.stdout)
+])
+
 def print_system_capacity():
     cpu_count = psutil.cpu_count(logical=True)
     total_memory = psutil.virtual_memory().total / (1024 * 1024)
-    print(f"CPU Count: {cpu_count}")
-    print(f"Total Memory: {total_memory:.2f} MB")
+    logging.info(f"CPU Count: {cpu_count}")
+    logging.info(f"Total Memory: {total_memory:.2f} MB")
 
 # Function to monitor resources
 def monitor_resources():
@@ -80,11 +88,11 @@ def quix_producer():
         if time.time() - message_window_start >= 1:
             throughput_data.append(messages_sent)
             throughput_time.append(time.time() - first_message_time)
-            print(f"Produced {messages_sent} messages in the last second")
+            logging.info(f"Produced {messages_sent} messages in the last second")
             messages_sent = 0
             message_window_start = time.time()
 
-    print("Quix producer stopped.")
+    logging.info("Quix producer stopped.")
 
 # Function to print producer metrics and generate graphs
 def print_producer_metrics():
@@ -92,16 +100,16 @@ def print_producer_metrics():
     avg_memory = np.mean(memory_usage)
     avg_output = np.mean(throughput_data)
 
-    print(f"CPU Usage (%) - Avg: {avg_cpu:.2f}")
-    print(f"Memory Usage (%) - Avg: {avg_memory:.2f}")
-    print(f"Message Output (msg/sec) - Avg: {avg_output:.2f}")
+    logging.info(f"CPU Usage (%) - Avg: {avg_cpu:.2f}")
+    logging.info(f"Memory Usage (%) - Avg: {avg_memory:.2f}")
+    logging.info(f"Message Output (msg/sec) - Avg: {avg_output:.2f}")
 
     # Calculate per-core CPU usage averages
     if len(cpu_per_core_usage) > 0:
         per_core_avg = [np.mean(core) for core in cpu_per_core_usage]
-        print("Average CPU usage per core:")
+        logging.info("Average CPU usage per core:")
         for i, avg in enumerate(per_core_avg):
-            print(f"Core {i}: {avg:.2f}%")
+            logging.info(f"Core {i}: {avg:.2f}%")
 
     # Generate performance graphs
     plt.figure(figsize=(12, 8))

@@ -1,0 +1,99 @@
+INFO:root:CPU Count: 4
+INFO:root:Total Memory: 15981.05 MB
+INFO:root:Starting Kafka-Python consumer...
+INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+INFO:kafka.conn:Probing node bootstrap-0 broker version
+INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+INFO:kafka.conn:Broker version identified as 2.6.0
+INFO:kafka.conn:Set configuration api_version=(2, 6, 0) to skip auto check_version requests on startup
+INFO:kafka.consumer.subscription_state:Updating subscribed topics to: ('kafka-scalability-test',)
+INFO:kafka.cluster:Group coordinator for kafka-scalability-consumer is BrokerMetadata(nodeId='coordinator-1', host='localhost', port=9092, rack=None)
+INFO:kafka.coordinator:Discovered coordinator coordinator-1 for group kafka-scalability-consumer
+INFO:kafka.coordinator:Starting new heartbeat thread
+INFO:kafka.coordinator.consumer:Revoking previously assigned partitions set() for group kafka-scalability-consumer
+INFO:kafka.conn:<BrokerConnection node_id=coordinator-1 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+INFO:kafka.conn:<BrokerConnection node_id=coordinator-1 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+INFO:kafka.coordinator:(Re-)joining group kafka-scalability-consumer
+INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+INFO:kafka.coordinator:Elected group leader -- performing partition assignments using range
+WARNING:kafka.coordinator.assignors.range:No partition metadata for topic kafka-scalability-test
+INFO:kafka.coordinator:Successfully joined group kafka-scalability-consumer with generation 1
+INFO:kafka.consumer.subscription_state:Updated partition assignment: []
+INFO:kafka.coordinator.consumer:Setting newly assigned partitions set() for group kafka-scalability-consumer
+INFO:kafka.coordinator.consumer:Revoking previously assigned partitions set() for group kafka-scalability-consumer
+INFO:kafka.coordinator:(Re-)joining group kafka-scalability-consumer
+INFO:kafka.coordinator:Elected group leader -- performing partition assignments using range
+INFO:kafka.coordinator:Successfully joined group kafka-scalability-consumer with generation 2
+INFO:kafka.consumer.subscription_state:Updated partition assignment: [TopicPartition(topic='kafka-scalability-test', partition=0)]
+INFO:kafka.coordinator.consumer:Setting newly assigned partitions {TopicPartition(topic='kafka-scalability-test', partition=0)} for group kafka-scalability-consumer
+INFO:kafka.conn:<BrokerConnection node_id=1 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+INFO:kafka.conn:<BrokerConnection node_id=1 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+INFO:kafka.conn:<BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+INFO:root:First message received. Timer started.
+INFO:root:Consumed 3 messages in the last second
+INFO:root:Consumed 2 messages in the last second
+INFO:root:Consumed 1 messages in the last second
+INFO:root:Consumed 10002 messages in the last second
+INFO:root:Consumed 10201 messages in the last second
+INFO:root:Consumed 9829 messages in the last second
+INFO:root:Consumed 10295 messages in the last second
+INFO:root:Consumed 9976 messages in the last second
+INFO:root:Consumed 18966 messages in the last second
+INFO:root:Consumed 19085 messages in the last second
+INFO:root:Consumed 19780 messages in the last second
+INFO:root:Consumed 18724 messages in the last second
+INFO:root:Consumed 17506 messages in the last second
+INFO:root:Consumed 18902 messages in the last second
+INFO:root:Consumed 17566 messages in the last second
+INFO:root:Consumed 17902 messages in the last second
+INFO:root:Consumed 20582 messages in the last second
+INFO:root:Consumed 17231 messages in the last second
+INFO:root:Consumed 21017 messages in the last second
+INFO:root:Consumed 18657 messages in the last second
+INFO:root:Consumed 18924 messages in the last second
+INFO:root:Consumed 17683 messages in the last second
+INFO:root:Consumed 16361 messages in the last second
+INFO:root:Consumed 19624 messages in the last second
+INFO:root:Consumed 19584 messages in the last second
+INFO:root:Consumed 19271 messages in the last second
+INFO:root:Consumed 18817 messages in the last second
+INFO:root:Consumed 18843 messages in the last second
+INFO:root:Consumed 20760 messages in the last second
+INFO:root:Consumed 18450 messages in the last second
+INFO:root:Consumed 16752 messages in the last second
+INFO:root:Consumed 19284 messages in the last second
+INFO:root:Consumed 18024 messages in the last second
+INFO:root:Consumed 18172 messages in the last second
+INFO:root:Consumed 18189 messages in the last second
+INFO:root:Consumed 18853 messages in the last second
+INFO:root:Consumed 17212 messages in the last second
+INFO:root:Consumed 19888 messages in the last second
+INFO:root:Consumed 19351 messages in the last second
+INFO:root:Consumed 19232 messages in the last second
+INFO:root:Consumed 16510 messages in the last second
+INFO:root:Consumed 20269 messages in the last second
+INFO:root:Consumed 19435 messages in the last second
+INFO:root:Consumed 19893 messages in the last second
+INFO:root:Consumed 18574 messages in the last second
+INFO:root:Consumed 18233 messages in the last second
+INFO:root:Consumed 18250 messages in the last second
+INFO:root:Consumed 19128 messages in the last second
+INFO:root:Consumed 14927 messages in the last second
+INFO:root:Consumed 20762 messages in the last second
+INFO:root:Consumed 18458 messages in the last second
+INFO:root:54 seconds have passed since the first message. Stopping the consumer.
+INFO:kafka.coordinator:Stopping heartbeat thread
+INFO:kafka.coordinator:Leaving consumer group (kafka-scalability-consumer).
+INFO:kafka.conn:<BrokerConnection node_id=coordinator-1 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+INFO:kafka.conn:<BrokerConnection node_id=1 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+INFO:root:CPU Usage (%) - Avg: 35.22
+INFO:root:Memory Usage (%) - Avg: 27.03
+INFO:root:Latency (ms) - Avg: 45.13
+INFO:root:Throughput (messages/sec) - Avg: 16743.92
+INFO:root:Average CPU usage per core:
+INFO:root:Core 0: 35.57%
+INFO:root:Core 1: 35.38%
+INFO:root:Core 2: 34.54%
+INFO:root:Core 3: 35.84%

@@ -1,5 +1,14 @@
+import logging
 import os
+import sys
 from quixstreams import Application
+
+# Configure logging
+log_file = "quix_consumer_anomaly_logs.txt"
+logging.basicConfig(level=logging.INFO, handlers=[
+    logging.FileHandler(log_file, mode='w'),
+    logging.StreamHandler(sys.stdout)
+])
 
 # Initialize the Quix application
 app = Application(
@@ -15,7 +24,7 @@ alerts_topic = app.topic(name="quix-alerts")
 # Function to check if an alert should be sent
 def should_alert(window_value: int, key, timestamp, headers):
     if window_value >= 90:
-        print(f"Quix Consumer: Alerting for MID {key}: Average Temperature {window_value}")
+        logging.info(f"Quix Consumer: Alerting for MID {key}: Average Temperature {window_value}")
         return True
 
 # Process the incoming temperature data, apply windowing, and filter for alerts
